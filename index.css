@@ -1,0 +1,154 @@
+body {font-family: Arial;
+    width: 350px;
+    height: 750px;
+
+
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: auto;
+  height: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.job-listing {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.job-company, .job-deadline, .notification-job-company, .notification-job-deadline {
+    width: 50%;
+}
+
+.job-description, .notification-job-description {
+    width: 25%;
+    font-size: smaller;
+}
+
+.job-apply, .job-notify {
+    width: 15%;
+    margin: 1px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.apply-button, .notify-button {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.clicked {
+    background-color: gray;
+    pointer-events: none;
+}
+
+.notification{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+body {font-family: Arial;
+    width: 350px;
+    height: 750px;
+
+
+}
+/* Style the tabs container */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style the individual tabs */
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .tab1 {
+    grid-column: 1 / 2;
+  }
+  
+  .tab2 {
+    grid-column: 2 / 3;
+  }
+  
+
+/* Style the labels for the tabs */
+.tab label {
+  background-color: #ddd;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: -1px;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+/* Style the label for the active tab */
+.tabs input:checked + label {
+  background-color: #fff;
+  border-bottom: none;
+  z-index: 2;
+}
+
+/* Style the content for the tabs */
+.tabs .content {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+/* Show the content for the active tab */
+.tabs input:checked + label + .content {
+  display: block;
+}

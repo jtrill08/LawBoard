@@ -1,0 +1,11 @@
+{
+    "name": "LawBoard",
+    "version":"1.0.0",
+    "manifest_version": 3,
+    "description": "legal deadlines",
+    "author": "NBIH-STUDIOS",
+    "action":{
+        "default_popup": "index.html"
+    }
+
+}

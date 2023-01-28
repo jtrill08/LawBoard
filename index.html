@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Apps</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'upcoming')">Upcoming</button>
+        <button class="tablinks" onclick="openTab(event, 'notifications')">Notifications</button>
+      </div>
+      
+      <div id="upcoming" class="tabcontent">
+        <form>
+            <input type="text" placeholder="Search..." id="searchInput" oninput="searchJobs()" formnovalidate>
+            <button type="submit" >Search</button>
+         </form>
+         
+         
+        <template id="job-listing-template">
+            <div class="job-listing" id="job-{{uniqueId}}">
+              <div class="job-company">{{jobCompany}}</div>
+              <div class="job-deadline">{{jobDeadline}}</div>
+              <div class="job-description">{{jobDescription}}</div>
+              <div class="job-apply">
+                  <a href="{{jobLink}}" target="_blank">
+                  <button class="apply-button">Apply</button>
+                  </a>
+              </div>
+              <div class="job-notify">
+                <button class="notify-button" id="{{jobId}}" onclick="notify(this)">Notify</button>
+            </div>            
+            </div>
+          </template>
+          
+      </div>
+      
+      <div id="notifications" class="tabcontent">
+<div class="notifications-container">
+    <template id="notification-template">
+        <div class="notification">
+            <div class="notification-job-company"></div>
+            <div class="notification-job-deadline"></div>
+            <div class="notification-job-description"></div>
+            <button class="delete-button">Delete</button>
+        </div>
+    </template>
+</div>
+
+
+        </div>
+      </div>         
+</body>
+</html>
