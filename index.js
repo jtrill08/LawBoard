@@ -177,7 +177,6 @@ function notify(button) {
     // add the notification to the container
     const notificationsContainer = document.querySelector(".notifications-container");
     notificationsContainer.appendChild(notificationNode);
-    
 
     // add the clicked class to the button
     button.classList.add("clicked");
