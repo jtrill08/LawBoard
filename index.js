@@ -178,7 +178,6 @@ function notify(button) {
     const notificationsContainer = document.querySelector(".notifications-container");
     notificationsContainer.appendChild(notificationNode);
     
-    chrome.browserAction.setBadgeText({text: String(notificationNode.length)});
 
     // add the clicked class to the button
     button.classList.add("clicked");
